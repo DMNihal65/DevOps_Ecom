@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import ProductList from './components/ProductList'
@@ -8,7 +8,12 @@ function App() {
   const [cartItems, setCartItems] = useState([])
   const [showCart, setShowCart] = useState(false)
 
+  useEffect(() => {
+    console.log('[App] Initializing...')
+  }, [])
+
   const addToCart = (product) => {
+    console.log('[Cart] Adding product:', product)
     const existingItem = cartItems.find(item => item.id === product.id)
     if (existingItem) {
       setCartItems(cartItems.map(item => 
@@ -20,6 +25,7 @@ function App() {
   }
 
   const removeFromCart = (productId) => {
+    console.log('[Cart] Removing product:', productId)
     setCartItems(cartItems.filter(item => item.id !== productId))
   }
 
