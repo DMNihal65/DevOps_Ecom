@@ -4,7 +4,7 @@ function Navbar({ cartItemsCount, toggleCart }) {
   return (
     <nav className="bg-blue-600 text-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold">E-Commerce Store</div>
+        <div className="text-xl font-bold">E-Commerce Stores</div>
         <div className="flex items-center space-x-4">
           <button 
             onClick={toggleCart}
@@ -15,7 +15,7 @@ function Navbar({ cartItemsCount, toggleCart }) {
               <path d="M16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
             </svg>
             <span>Cart ({cartItemsCount})</span>
-          </button>
+          </button> 
         </div>
       </div>
     </nav>
